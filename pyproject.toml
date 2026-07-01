@@ -1,0 +1,51 @@
+[project]
+name = "sakhi"
+version = "0.1.0"
+description = "Sakhi - AI-powered RAG Chat Application"
+requires-python = ">=3.11"
+
+dependencies = [
+    # Backend
+    "fastapi>=0.138.0",
+    "uvicorn>=0.49.0",
+
+    # Frontend
+    "streamlit>=1.58.0",
+
+    # LangChain
+    "langchain>=1.3.11",
+    "langchain-core>=1.4.8",
+    "langchain-community>=0.4.2",
+    "langchain-groq>=1.1.3",
+    "langchain-pinecone>=0.2.13",
+    "langchain-text-splitters>=1.1.2",
+
+    # Vector Database
+    "pinecone>=7.3.0",
+
+    # Database
+    "sqlalchemy>=2.0.51",
+    "psycopg[binary]>=3.3.4",
+
+    # Configuration
+    "pydantic-settings>=2.10.1",
+    "python-dotenv>=1.2.2",
+
+    # Authentication
+    "bcrypt>=5.0.0",
+    "pyjwt>=2.13.0",
+
+    # File Upload
+    "python-multipart>=0.0.32",
+    "aiofiles>=24.1.0",
+
+    # PDF Processing
+    "pymupdf>=1.26.7",
+
+    # Embeddings
+    "sentence-transformers>=5.1.0",
+
+    # Utilities
+    "requests>=2.34.2",
+    "nltk>=3.9.4",
+]
