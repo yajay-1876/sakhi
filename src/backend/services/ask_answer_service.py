@@ -11,7 +11,6 @@ from src.db.crud import add_message, get_chat_history_by_conv_id
 from src.backend.rag.rag_chain import ask_rag_question, ask_question
 from src.backend.rag.retriever import retrieve_chunks
 
-llm=ChatGroq( model="llama-3.3-70b-versatile" )
 
 def ask_answer_service(conv_id, user_query):
     try:

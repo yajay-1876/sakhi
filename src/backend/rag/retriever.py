@@ -4,7 +4,7 @@ from src.backend.rag.pinecone_store import index
 def retrieve_chunks(
         conv_id: str,
         query: str,
-        top_k: int = 3
+        top_k: int = 5
 ):
     response = index.search(
         namespace=conv_id,
@@ -15,7 +15,7 @@ def retrieve_chunks(
     )
     answer_text=[]
     for hit in response['result']['hits']:
-        if hit['_score']>0.30:
+        if hit['_score']>0.20:
             answer_text.append(f"Filename: {hit['fields']['filename']}\n"
                                f"Page: {hit['fields']['page']}\n"
                                f"{hit['fields']['text']}\n")

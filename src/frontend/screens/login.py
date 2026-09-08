@@ -12,5 +12,7 @@ def show_login_page():
     st.caption("Choose a unique username. You'll use the same username whenever you log in.")
 
     if st.button("Login"):
-
-        login_user(username)
+        if username and username.strip():
+            login_user(username)
+        else:
+            st.warning("Please enter a username")

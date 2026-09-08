@@ -1,6 +1,6 @@
 from langchain_groq import ChatGroq
 def get_llm():
-    return ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    return ChatGroq(model="openai/gpt-oss-120b", temperature=0)
 
 
 # from langchain_openai import ChatOpenAI

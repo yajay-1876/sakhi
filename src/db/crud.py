@@ -84,7 +84,7 @@ def add_document(doc_id:str, conv_id: str, filename: str)->bool:
     with SessionLocal() as db:
         exists = (
             db.query(Document)
-                .filter(Document.document_id==doc_id)
+                .filter(Document.document_id==doc_id, Document.conversation_id==conv_id)
                 .first()
             is not None
         )
